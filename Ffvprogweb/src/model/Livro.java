@@ -41,8 +41,15 @@ public class Livro {
 		return autor;
 	}
 
-	public void setAutor(String autor) {
-		this.autor = autor;
+	public String setAutor(String autor) {
+		String mensagem = null;
+		if ("".equals(autor)) {
+			mensagem = "Informações inválidas";
+		} else {
+			this.autor = autor;
+		}
+
+		return mensagem;
 	}
 
 	@Override
