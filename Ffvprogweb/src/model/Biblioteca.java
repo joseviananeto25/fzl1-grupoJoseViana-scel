@@ -12,11 +12,11 @@ public class Biblioteca {
 	}
 	
 	public void save(Livro livro) {
-		
+		livros.add(livro);
 	}
 	
 	public int size() {
-		return 1;
+		return livros.size();
 	}
 
 	public List<Livro> getLivros() {

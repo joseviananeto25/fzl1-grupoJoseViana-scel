@@ -9,8 +9,16 @@ public class Livro {
 	public String getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+	public String setIsbn(String isbn) {
+		String mensagem = null;
+		if ("".equals(isbn)) {
+			mensagem = "Informações inválidas";
+		} else {
+			this.isbn = isbn;
+		}
+		
+		return mensagem;
+		
 	}
 	public String getTitulo() {
 		return titulo;
@@ -24,6 +32,12 @@ public class Livro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		
+		return true;
+	}
+	
 	
 
 }
