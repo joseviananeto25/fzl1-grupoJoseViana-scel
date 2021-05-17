@@ -51,5 +51,12 @@ public class MainTest {
 		umLivro.setAutor("Pressman");
 		assertEquals("Informações inválidas", umLivro.setIsbn(""));
 	}
+	
+	@Test
+	public void ct04_cadastrar_livro_com_titulo_em_branco() {
+		Livro umLivro = new Livro();
+		umLivro.setAutor("Pressman");
+		assertEquals("Informações inválidas", umLivro.setTitulo(""));
+	}
 
 }
