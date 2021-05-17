@@ -44,5 +44,12 @@ public class MainTest {
 		re.setTitulo("Engenharia de Software");
 		assertTrue(re.equals(lista.get(0)));
 	}
+	
+	@Test
+	public void ct03_cadastrar_livro_com_isbn_em_branco() {
+		Livro umLivro = new Livro();
+		umLivro.setAutor("Pressman");
+		assertEquals("Informações inválidas", umLivro.setIsbn(""));
+	}
 
 }
