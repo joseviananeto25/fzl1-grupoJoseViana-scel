@@ -1,11 +1,16 @@
 package test;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
+
+import model.Biblioteca;
+import model.Livro;
 
 public class MainTest {
 
 	@Test
-	void ct01_quando_dados_validos_cadastra_com_sucesso() {
+	public void ct01_quando_dados_validos_cadastra_com_sucesso() {
 		// dado que nao existem livros cadastrados
 		Biblioteca biblioteca = new Biblioteca();
 		// quando um livro é cadastrado
